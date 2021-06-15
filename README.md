@@ -1,20 +1,22 @@
-Multiplication Practice
+BMI Calculator
 =================================
 
 About:
-This project is a practice tool for times tables from 1 to 12. The user will click on a number, indicating he or she wishes to practice multiplication of a selected number from times 1 to times 12. After finishing one round of practice, the user would then enter their name and see results. At the end, the user can either go back to start or email results to themselves. Remember, the backtracking button is shown but that feature is disabled for this particular app.
+This project will ask the user for their name, gender, age, height, weight, and circumferences of the hip and waist in order to calculate one’s BMI and Waist Hip Ratio for both imperial and metric units. At the end, the user has the option to email themselves (or practically anyone) their results. 
 
 Main Menu:
-This is the starting page of the application, all the user does is to click the start button to start practicing or just using the app.
+This part of the app just shows a visual about the purpose of this app, and it also contains a button, which the user will click to start using this app. Remember that on the top, the user can select the icon to switch from light mode to dark mode. When the user is in light mode, it will show the moon icon to go to dark mode, and when in dark mode, it shows a sun icon to go to light mode. 
 
-Pick a Number:
-There are 12 buttons from 1 to 12, and clicking on a number button will indicate the user will practice multiplication from that number times 1 to that number times 12 in the next page. Click the button with the number you wish to practice basic multiplication with.
+Enter values to begin:
+The user will enter name, age, gender, and units in order to start using this app. Waist hip ratio depends heavily on gender since males and females can get different health indications based on results, and unit matters since BMI is calculated differently for imperial units as opposed to metric units. We received the name and age for extra purposes for enhancing details of the app.
 
-Multiplication Practice:
-Here, the user will practice multiplication from times 1 to times 12 with a selected number based on the  clicked button in the previous page. If the user is correct on their first try, there will be points added to his or her score, else there will be a message saying the answer is wrong. Blank submissions will be counted as wrong. If the user is wrong 3 or more times, there will be a pop up showing the correct answer. If the user gets a problem right after the first try, no points will be added. At the end, the number of points will be shown and the user can practice again or quit. If “Again” is clicked, the user will be prompted to practice again, but if “Exit” is clicked, user will be directed to enter their name.
+Calculate BMI:
+The user will enter their weight in lbs or kg based on imperial or metric units, and will do the same with height by entering value in or cm based on units. These values will be used to calculate the BMI, and each BMI will give an indication of the user’s weight status based on BMI. 
 
-Enter Name:
-This is where the user enters his or her name and clicks “Next” to see results. The user must enter any name to proceed. Any name is accepted except no name, and if the space is blank there will be an error message.
+
+Calculate Waist Hip Ratio:
+The user will enter waist circumference and hip circumference in either in or cm based on imperial or metric units. Those values will be used to calculate the waist hip ratio, and each value will give an indication based on body measurements and gender. 
 
 Results:
-At the end of each practice, the user is directed to this once the “Exit” button is clicked for the second pop up following the results. There will be the user’s name, today’s date, number practiced, and fraction of correct answers shown. Below, if the user clicks the “Send” button, he can send results by email; but if “Cancel” is clicked, it will redirect to the main menu.
+Here, the user’s results will be shown, and the user has the option of emailing results to themselves (they can literally send to anyone). Or they either have the option to go back to the beginning (if done so, all data will be lost). 
+
