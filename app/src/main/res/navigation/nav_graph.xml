@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.cupcake.StartFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_nameAndAgeFragment"
+            app:destination="@id/nameAndAgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nameAndAgeFragment"
+        android:name="com.example.cupcake.NameAndAgeFragment"
+        android:label="@string/enter_values"
+        tools:layout="@layout/fragment_name_and_age">
+        <action
+            android:id="@+id/action_nameAndAgeFragment_to_bmiFragment"
+            app:destination="@id/bmiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bmiFragment"
+        android:name="com.example.cupcake.BmiFragment"
+        android:label="@string/calculate_bmi"
+        tools:layout="@layout/fragment_bmi">
+        <action
+            android:id="@+id/action_bmiFragment_to_waistToHipFragment"
+            app:destination="@id/waistToHipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/waistToHipFragment"
+        android:name="com.example.cupcake.WaistToHipFragment"
+        android:label="@string/calculate_waist_hip_ratio"
+        tools:layout="@layout/fragment_waist_to_hip">
+        <action
+            android:id="@+id/action_waistToHipFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.cupcake.SummaryFragment"
+        android:label="@string/results"
+        tools:layout="@layout/fragment_summary">
+        <action
+            android:id="@+id/action_summaryFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+</navigation>

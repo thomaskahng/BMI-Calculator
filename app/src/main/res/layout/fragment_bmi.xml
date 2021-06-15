@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BmiFragment">
+
+    <data>
+        <!-- Child tag of variable in data to bind data in ViewModel to layout -->
+        <variable
+            name="calcModel"
+            type="com.example.cupcake.calculations.CalculationFunctions" />
+
+        <!-- Add layout variable and type for view of fragment -->
+        <variable
+            name="bmiFragment"
+            type="com.example.cupcake.BmiFragment" />
+    </data>
+    <!-- Contents of name, gender, and age -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/side_margin" >
+
+            <!-- Enter calculation values -->
+            <TextView
+                android:id="@+id/intro_label"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_bmi"
+                android:layout_gravity="center" />
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Show in view the height -->
+            <TextView
+                android:id="@+id/height_label"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height"/>
+
+            <!-- Show where to enter the height -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                tools:context=".ui.game.GameFragment">
+
+                <!-- Input height here -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField"
+                    style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/enter_height_here"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/height_label"
+                    tools:ignore="NotSibling">
+
+                    <!-- Textbox dimensions -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider1"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Show in view the weight -->
+            <TextView
+                android:id="@+id/weight_label"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"/>
+
+            <!-- Show where to enter the weight -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                tools:context=".ui.game.GameFragment">
+
+                <!-- Input weight here -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField2"
+                    style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/enter_weight_here"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weight_label"
+                    tools:ignore="NotSibling">
+
+                    <!-- Textbox dimensions -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider2"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- BMI -->
+            <TextView
+                android:id="@+id/showBMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@{calcModel.bmiSentence}"
+                tools:text="0"
+                style="@style/ScoreText" />
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider3"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Calculate BMI button -->
+            <Button
+                android:id="@+id/calculateBMI"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/min_width"
+                android:onClick="@{() -> bmiFragment.calcBMI()}"
+                android:text="@string/calculate_bmi" />
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider4"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Next button -->
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/min_width"
+                android:onClick="@{() -> bmiFragment.saveBMI()}"
+                android:text="@string/next" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

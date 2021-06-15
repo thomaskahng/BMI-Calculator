@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WaistToHipFragment">
+
+    <data>
+        <!-- Child tag of variable in data to bind data in ViewModel to layout -->
+        <variable
+            name="calcModel"
+            type="com.example.cupcake.calculations.CalculationFunctions" />
+
+        <!-- Add layout variable and type for view of fragment -->
+        <variable
+            name="waistToHipFragment"
+            type="com.example.cupcake.WaistToHipFragment" />
+    </data>
+    <!-- Contents of name, gender, and age -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/side_margin" >
+
+            <!-- Enter calculation values -->
+            <TextView
+                android:id="@+id/intro_label"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_waist_hip_ratio"
+                android:layout_gravity="center" />
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Show in view the waist circumference -->
+            <TextView
+                android:id="@+id/waist_label"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waist_circumference"/>
+
+            <!-- Show where to enter the waist circumference -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                tools:context=".ui.game.GameFragment">
+
+                <!-- Input waist circumference here -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField"
+                    style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/enter_waist_circumference_in_or_cm"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/waist_label"
+                    tools:ignore="NotSibling">
+
+                    <!-- Textbox dimensions -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider1"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Show in view the hip circumference -->
+            <TextView
+                android:id="@+id/hip_label"
+                android:textSize="@dimen/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hip_circumference"/>
+
+            <!-- Show where to enter the weight -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                tools:context=".ui.game.GameFragment">
+
+                <!-- Input weight here -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField2"
+                    style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/enter_hip_circumference_in_or_cm"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hip_label"
+                    tools:ignore="NotSibling">
+
+                    <!-- Textbox dimensions -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName|textNoSuggestions"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider2"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Waist to hip ratio -->
+            <TextView
+                android:id="@+id/showWaistHip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@{calcModel.waistHipSentence}"
+                tools:text="0"
+                style="@style/ScoreText" />
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider3"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Calculate Waist Hip Ratio button -->
+            <Button
+                android:id="@+id/calculateWaistCir"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/min_width"
+                android:onClick="@{() -> waistToHipFragment.calcWaistHip()}"
+                android:text="@string/calculate_waist_hip_ratio" />
+
+            <!-- Divider for spacing -->
+            <View
+                android:id="@+id/divider4"
+                style="@style/Widget.Cupcake.Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/big_dim"
+                android:layout_marginBottom="@dimen/margin_between_elements" />
+
+            <!-- Next button -->
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/min_width"
+                android:onClick="@{() -> waistToHipFragment.saveWaistHip()}"
+                android:text="@string/next" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

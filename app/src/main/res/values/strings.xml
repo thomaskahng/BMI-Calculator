@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="start">Start</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name:</string>
+    <string name="enter_name">Enter Name:</string>
+    <string name="gender">Gender:</string>
+    <string name="age">Age:</string>
+
+    <string name="minus_button">Minus Button</string>
+    <string name="plus_button">Plus Button</string>
+    <string name="unit">Unit:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
+    <string name="next">Next</string>
+    <string name="enter_values">Enter Values</string>
+    <string name="enter_valid_email">Please enter your email!</string>
+    <string name="enter_valid_name">Please enter your name!</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
+    <string name="bmi">BMI:</string>
+
+    <string name="increase">Increase</string>
+    <string name="decrease">Decrease</string>
+    <string name="enter_height">height</string>
+    <string name="enter_weight">weight</string>
+    <string name="enter_height_here">Enter Height (in or cm):</string>
+    <string name="enter_weight_here">Enter Weight (lb or kg):</string>
+    <string name="calculate_waist_hip_ratio">Calculate Waist Hip Ratio</string>
+    <string name="enter_waist_circumference_in_or_cm">Enter waist circumference (in or cm):</string>
+    <string name="waist_circumference">Waist Circumference:</string>
+    <string name="hip_circumference">Hip Circumference:</string>
+    <string name="enter_hip_circumference_in_or_cm">Enter hip circumference (in or cm):</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="waist_hip_ratio">Waist Hip Ratio:</string>
+
+    <string name="results">Results</string>
+    <string name="res_details"> Name: %1$s \nAge: %2$s \nGender: %3$s
+        \nBMI: %4$s \nWaist Hip Ratio: %5$s</string>
+    <string name="res_details_final"> Name: %1$s \nAge: %2$s \nGender: %3$s
+        \nBMI: %4$s \nWaist Hip Ratio: %5$s \n \nThank you!</string>
+
+    <string name="action_day">Day Mode</string>
+    <string name="action_night">Night Mode</string>
+    <string name="results_end">Results:</string>
+    <string name="email">Email:</string>
+    <string name="enter_email">Enter email:</string>
+</resources>
