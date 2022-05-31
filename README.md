@@ -1,22 +1,21 @@
-BMI Calculator
-=================================
+# Main Menu (Light and Dark Mode
 
-About:
-This project will ask the user for their name, gender, age, height, weight, and circumferences of the hip and waist in order to calculate one’s BMI and Waist Hip Ratio for both imperial and metric units. At the end, the user has the option to email themselves (or practically anyone) their results. 
+![Screenshot 2022-05-30 200957](https://user-images.githubusercontent.com/76675748/171074113-741b67ef-3cad-46cf-9119-d5cc500ea108.png)
 
-Main Menu:
-This part of the app just shows a visual about the purpose of this app, and it also contains a button, which the user will click to start using this app. Remember that on the top, the user can select the icon to switch from light mode to dark mode. When the user is in light mode, it will show the moon icon to go to dark mode, and when in dark mode, it shows a sun icon to go to light mode. 
+![Screenshot 2022-05-30 201010](https://user-images.githubusercontent.com/76675748/171074122-5d52fa32-4e37-4efa-8292-345f6938b995.png)
 
-Enter values to begin:
-The user will enter name, age, gender, and units in order to start using this app. Waist hip ratio depends heavily on gender since males and females can get different health indications based on results, and unit matters since BMI is calculated differently for imperial units as opposed to metric units. We received the name and age for extra purposes for enhancing details of the app.
+# Enter Personal Details
 
-Calculate BMI:
-The user will enter their weight in lbs or kg based on imperial or metric units, and will do the same with height by entering value in or cm based on units. These values will be used to calculate the BMI, and each BMI will give an indication of the user’s weight status based on BMI. 
+![Screenshot 2022-05-30 201037](https://user-images.githubusercontent.com/76675748/171074193-4873ca77-ae6f-4057-9440-a0525d0dbb7b.png)
 
+# Caluclate BMI
 
-Calculate Waist Hip Ratio:
-The user will enter waist circumference and hip circumference in either in or cm based on imperial or metric units. Those values will be used to calculate the waist hip ratio, and each value will give an indication based on body measurements and gender. 
+![Screenshot 2022-05-30 201115](https://user-images.githubusercontent.com/76675748/171074219-65e3b806-c241-43dc-9941-13d885d13f5f.png)
 
-Results:
-Here, the user’s results will be shown, and the user has the option of emailing results to themselves (they can literally send to anyone). Or they either have the option to go back to the beginning (if done so, all data will be lost). 
+# Calculate Waist-Hip Ratio
 
+![Screenshot 2022-05-30 201306](https://user-images.githubusercontent.com/76675748/171074244-fa63b368-28c9-4643-8c2c-a20e746329a6.png)
+
+# Send Results or Not
+
+![Screenshot 2022-05-30 201323](https://user-images.githubusercontent.com/76675748/171074260-f7bb0299-56f3-47ca-9267-394ab26e2c37.png)
